@@ -13,7 +13,7 @@ theme:
 extra_css:
     - 'css/extra.css'
 repo_name: 'testcontainers-go'
-repo_url: 'https://github.com/testcontainers/testcontainers-go'
+repo_url: 'https://github.com/mehanizm/testcontainers-go'
 markdown_extensions:
     - admonition
     - codehilite:

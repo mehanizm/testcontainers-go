@@ -1,6 +1,6 @@
-module github.com/testcontainers/testcontainers-go
+module github.com/mehanizm/testcontainers-go
 
-go 1.13
+go 1.15
 
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78 // indirect
@@ -30,6 +30,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.2.0 // indirect
 	github.com/stretchr/testify v1.6.1
+	github.com/mehanizm/testcontainers-go v0.9.0
 	golang.org/x/sys v0.0.0-20200116001909-b77594299b42
 	golang.org/x/time v0.0.0-20181108054448-85acf8d2951c // indirect
 	google.golang.org/grpc v1.17.0 // indirect

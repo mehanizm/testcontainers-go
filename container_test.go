@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/mehanizm/testcontainers-go/wait"
 	"github.com/pkg/errors"
-	"github.com/testcontainers/testcontainers-go/wait"
 )
 
 func Test_ContainerValidation(t *testing.T) {

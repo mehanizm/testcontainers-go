@@ -14,12 +14,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/testcontainers/testcontainers-go"
-	"github.com/testcontainers/testcontainers-go/wait"
+	"github.com/mehanizm/testcontainers-go"
+	"github.com/mehanizm/testcontainers-go/wait"
 )
 
 //
-// https://github.com/testcontainers/testcontainers-go/issues/183
+// https://github.com/mehanizm/testcontainers-go/issues/183
 func ExampleHTTPStrategy() {
 	ctx := context.Background()
 	req := testcontainers.ContainerRequest{

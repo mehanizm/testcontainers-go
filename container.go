@@ -10,7 +10,7 @@ import (
 	"github.com/docker/go-connections/nat"
 	"github.com/pkg/errors"
 
-	"github.com/testcontainers/testcontainers-go/wait"
+	"github.com/mehanizm/testcontainers-go/wait"
 )
 
 // DeprecatedContainer shows methods that were supported before, but are now deprecated
