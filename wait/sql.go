@@ -9,6 +9,11 @@ import (
 	"github.com/docker/go-connections/nat"
 )
 
+const (
+	oracleCheck   = "select 1 from dual"
+	postgresCheck = "select 1"
+)
+
 //ForSQL constructs a new waitForSql strategy for the given driver
 func ForSQL(port nat.Port, driver string, url func(nat.Port) string) *waitForSql {
 	return &waitForSql{
@@ -64,8 +69,11 @@ func (w *waitForSql) WaitUntilReady(ctx context.Context, target StrategyTarget) 
 		case <-ctx.Done():
 			return ctx.Err()
 		case <-ticker.C:
-
-			if _, err := db.ExecContext(ctx, "SELECT 1"); err != nil {
+			checkStatement := postgresCheck
+			if w.Driver == "godror" {
+				checkStatement = oracleCheck
+			}
+			if _, err := db.ExecContext(ctx, checkStatement); err != nil {
 				continue
 			}
 			return nil
