@@ -90,7 +90,8 @@ type ContainerRequest struct {
 	ReaperImage     string              // alternative reaper image
 	AutoRemove      bool                // if set to true, the container will be removed from the host when stopped
 	NetworkMode     container.NetworkMode
-	AlwaysPullImage bool // Always pull image
+	AlwaysPullImage bool  // always pull image
+	ShmSize         int64 // size of shared memory in mb
 }
 
 // ProviderType is an enum for the possible providers
