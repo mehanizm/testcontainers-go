@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/mehanizm/testcontainers-go/wait"
 	"github.com/stretchr/testify/assert"
-	"github.com/testcontainers/testcontainers-go/wait"
 )
 
 func ExampleNewLocalDockerCompose() {
